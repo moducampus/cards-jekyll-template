@@ -1,7 +1,7 @@
 # Site settings
 title: 모두의캠퍼스 - 개발블로그
 description: 모두의캠퍼스에서 개발하는 이야기를 담고있어요
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "posts" # the subpath of your site, e.g. /blog
 # url: "https://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 url: https://moducampus.github.io
 
