@@ -6,6 +6,7 @@ image: '/assets/img/linter/errors-list.png'
 description: 'Valide seu código em JS/ES6 em busca de erros, warnings, códigos esquecidos e melhore a sua qualidade. Seu amiguinho agradece um código mais limpo.'
 main-class: 'js'
 color: '#D6BA32'
+representative-picture: https://i.imgur.com/IJiVu4m.png
 tags:
 - js
 - linter

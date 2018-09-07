@@ -6,6 +6,7 @@ image: '/assets/img/dica-rapida-2/main.png'
 description: 'Aprenda como ser mais social, ter maior relevância nas redes sociais e atrair mais usuários.'
 main-class: 'html'
 color: '#EB7728'
+representative-picture: https://i.imgur.com/IJiVu4m.png
 tags:
 - social
 - seo

@@ -5,6 +5,7 @@ date: 2015-01-08 08:39:47
 description: "O SVG finalmente começa dar o ar das graças e você vai saber aqui o porquê disso."
 main-class: 'svg'
 color: '#7D669E'
+representative-picture: https://i.imgur.com/F2KRB0Q.png
 tags:
 - svg
 - frontend

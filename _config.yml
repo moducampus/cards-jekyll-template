@@ -1,17 +1,18 @@
 # Site settings
-title: Willian Justen - Desenvolvedor Front End
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "/cards-jekyll-template" # the subpath of your site, e.g. /blog
-url: "https://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: 모두의캠퍼스 - 개발블로그
+description: 모두의캠퍼스에서 개발하는 이야기를 담고있어요
+baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: https://moducampus.github.io
 
 # User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-email: anon@anon.com
+username: drakejin
+user_description: 모두의캠퍼스에서 개발을 하고 있슴다.
+email: drakejin@moducampus.com
 twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
+github_username:  moducampus
 gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+disqus_username: moducampus
 
 # Build settings
 markdown: kramdown
@@ -29,13 +30,13 @@ compress_html:
 # Links to include in menu navigation
 # For external links add external: true
 links:
-  - title: Home
+  - title: 홈
     url: /
-  - title: Series
+  - title: 시리즈
     url: /series
-  - title: Tags
+  - title: 태그
     url: /tags
-  - title: About Me
+  - title: 소개
     url: /about
 
 # exclude my node related stuff
