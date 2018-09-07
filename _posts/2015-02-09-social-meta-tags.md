@@ -6,7 +6,7 @@ description: 'Aprenda como ser mais social, ter maior relevância nas redes soci
 main-class: 'html'
 color: '#EB7728'
 representative-picture: https://i.imgur.com/IJiVu4m.png
-author: drake-jin
+author: yung6699
 tags:
 - social
 - seo

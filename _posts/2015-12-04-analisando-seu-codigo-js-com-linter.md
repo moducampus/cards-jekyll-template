@@ -6,7 +6,7 @@ description: 'Valide seu código em JS/ES6 em busca de erros, warnings, códigos
 main-class: 'js'
 color: '#D6BA32'
 representative-picture: https://i.imgur.com/IJiVu4m.png
-author: drake-jin
+author: velopert
 tags:
 - js
 - linter

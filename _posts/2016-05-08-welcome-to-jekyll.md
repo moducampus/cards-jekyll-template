@@ -6,7 +6,7 @@ description: 'Put your description here.'
 main-class: 'jekyll'
 color: '#B31917'
 representative-picture: https://i.imgur.com/IJiVu4m.png
-author: drake-jin
+author: torvalds
 tags:
 - jekyll
 categories:
