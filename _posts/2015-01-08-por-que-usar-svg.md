@@ -6,12 +6,12 @@ description: "O SVG finalmente começa dar o ar das graças e você vai saber aq
 main-class: 'svg'
 color: '#7D669E'
 representative-picture: https://i.imgur.com/F2KRB0Q.png
+author: drake-jin
 tags:
 - svg
 - frontend
 - trend
 - "dicarapida"
-image: "/assets/img/por-que-usar-svg/coloridos.jpg"
 categories:
 - "O mundo mágico do SVG"
 twitter_text: "Por que você deveria estar usando SVG?"

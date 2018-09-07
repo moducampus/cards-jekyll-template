@@ -85,7 +85,6 @@ When you create a new post, you need to fill the post information in the front-m
 layout: post
 title: "Falando sobre RSCSS"
 date: 2016-02-07 18:48:16
-image: '/assets/img/rscss/rscss.png'
 description: 'Escrevendo CSS sem perder a sanidade. Aprenda uma metodologia que pode salvar muitas dores de cabeça.'
 main-class: 'css'
 color: '#2DA0C3'

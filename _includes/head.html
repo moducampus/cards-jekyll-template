@@ -7,26 +7,26 @@
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Google Authorship Markup -->
-    <link rel="author" href="https://plus.google.com/+{{site.gplus_username}}?rel=author">
+    <link rel="author" href="https://moducampus.com">
 
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@{{site.twitter_username}}">
+    <meta name="twitter:site" content="모두의캠퍼스의 개발자들">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}{{page.image }}">
+    {% if page.representative-picture %}
+        <meta property="twitter:image:src" content="{{ page.representative-picture }}">
     {% else %}
-    <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+        <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    {% if page.representative-picture %}
+        <meta property="og:image" content="{{ page.representative-picture }}">
     {% else %}
-    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+        <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
@@ -63,12 +63,13 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125395793-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125410767-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-125395793-1');
+
+        gtag('config', 'UA-125410767-1');
     </script>
 
 </head>

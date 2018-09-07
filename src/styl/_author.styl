@@ -4,8 +4,11 @@
     width 100%
     padding rem(40px) 0
     margin rem(40px) 0
+    height 350px
     +above(cut)
         padding rem(50px) 0
+    p
+        margin 5px 0px
     .details
         margin auto
         max-width rem(800px)
@@ -41,11 +44,19 @@
     .desc
         mainFont(300)
         margin rem(10px)
-        font-size rem(16px)
+        font-size rem(12px)
         +above(cut)
             font-size rem(20px)
     .email,
-    .github
+    .blog,
+    .github,
         text-decoration none
         color main
-
+    .git-organisms
+        .org
+            display inline-block
+            .item
+                border-radius: 4px
+                border 1px solid #ccc
+                width 24px
+                margin-right rem(8px)

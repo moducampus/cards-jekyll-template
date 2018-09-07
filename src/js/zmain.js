@@ -1,4 +1,5 @@
 (function( $, window, undefined ) {
+  window.$ = $
   // Menu
   $("a#slide").click(function(){
     $("#sidebar,a#slide,#fade").addClass("slide");
@@ -58,19 +59,19 @@
       updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
   });
 
-function scrollBanner() {
-  var scrollPos;
-  var headerText = document.querySelector('.header-post .content')
-  scrollPos = window.scrollY;
+  function scrollBanner() {
+    var scrollPos;
+    var headerText = document.querySelector('.header-post .content')
+    scrollPos = window.scrollY;
 
-  if (scrollPos <= 500 && headerText != null) {
-      headerText.style.transform =  "translateY(" + (-scrollPos/3) +"px" + ")";
-      headerText.style.opacity = 1-(scrollPos/500);
+    if (scrollPos <= 500 && headerText != null) {
+        headerText.style.transform =  "translateY(" + (-scrollPos/3) +"px" + ")";
+        headerText.style.opacity = 1-(scrollPos/500);
+    }
   }
-}
 
-if (screen.width > 1024) {
-  window.addEventListener('scroll', scrollBanner);
-}
+  if (screen.width > 1024) {
+    window.addEventListener('scroll', scrollBanner);
+  }
 
 })( Zepto, window );

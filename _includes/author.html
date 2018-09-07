@@ -1,12 +1,115 @@
-<section class="author" itemprop="author">
+<section id="author" class="author" itemprop="author">
     <div class="details" itemscope itemtype="http://schema.org/Person">
-        <img itemprop="image" class="img-rounded" width="250px" src="https://i.imgur.com/jx6OAEf.png" alt="{{site.name}}">
+        <img itemprop="image" class="img-rounded" width="250px">
         <p class="def">Author</p>
         <h3 class="name">
-            <a itemprop="name" href="https://plus.google.com/+{{site.gplus_username}}/posts">{{site.username}}</a>
+            <a itemprop="name"></a>
         </h3>
-        <p class="desc">{{site.user_description}}</p>
-        <p><a itemprop="email" class="email" href="mailto:{{site.email}}">{{site.email}}</a></p>
-        <p><a itemprop="github" class="github" href="https://github.com/{{site.github_username}}">github.com/{{site.github_username}}</a></p>
+        <p class="git">
+            <b>Git Repos: </b><span class="git-repos"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <b>Git Gists: </b><span class="git-gists"></span>
+        </p>
+        <div class="git-organisms">
+        </div>
+        <p><a itemprop="email" class="email"></a></p>
+        <p><a itemprop="github" class="github"></a></p>
+        <p><a itemprop="blog" class="blog"></a></p>
+        <p><a itemprop="location" class="location"></a></p>
+        <p class="desc"></p>
     </div>
 </section>
+<script>
+
+var onload = function () {
+  const $author = $('#author');
+  $.ajax({
+    type: 'GET',
+    url: 'https://api.github.com/users/{{page.author}}',
+    dataType: 'json',
+    success: function(data, textStatus, jqXHR) {
+      $author.find('.img-rounded')
+        .attr('src', data.avatar_url)
+        .attr('alt', data.login);
+      $author.find('.name').text(data.login);
+      $author.find('.desc').text(data.bio);
+
+      $author.find('.github')
+        .text('{{page.author}}@github')
+        .attr('href', 'https://github.com/{{page.author}}')
+        .attr('target', '_blank')
+        .addClass('externalLink');
+        
+      if (data.email) {
+        $author.find('.email')
+          .text(data.email)
+          .attr('href', 'mailto:' + data.email)
+          .attr('target', '_blank')
+          .addClass('externalLink');
+      }
+      if (data.blog) {
+        $author.find('.blog')
+        .text('{{page.author}}의 블로그')
+        .attr('href', data.blog)
+        .attr('target', '_blank')
+        .addClass('externalLink');
+      }
+      if (data.public_repos) {
+        $author.find('.git-repos')
+        .text(data.public_repos)
+      }
+  
+      if (data.public_gists) {
+        $author.find('.git-gists')
+        .text(data.public_gists)
+      }
+
+      if (data.location) {
+        $author.find('.location')
+        .html('사는곳: ' + data.location)
+      }
+
+    },
+    error: function(x,y,z) {
+        console.log("***ERROR in author.js***");
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        // x.responseText should have what's wrong
+    },
+    complete: function() {
+        $.ajax({
+            type: 'GET',
+            url: 'https://api.github.com/users/{{page.author}}/orgs',
+            // url: 'https://api.github.com/users/kennethreitz/orgs',
+            dataType: 'json',
+            success: function(orgData, textStatus, jqXHR) {
+                $author.find('.git-organisms').children().remove();
+                $.each(orgData, function (i, item) {
+                    if (item) {
+                        var orgs = '<div class="org">' +
+                        '   <a href="https://github.com/"' + item.login + '">' +
+                        '       <img class="item" src="' + item.avatar_url + '" alt="' + item.login + '" />' +
+                        '   </a>' +
+                        '</div>';
+                        $author.find('.git-organisms').append(orgs);
+                    }
+                })
+            },
+        });
+    },
+  });
+}
+
+
+
+
+
+if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+  onload();
+} else {
+  document.addEventListener("DOMContentLoaded", onload);
+}
+
+
+</script>
