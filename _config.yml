@@ -30,14 +30,16 @@ compress_html:
 # Links to include in menu navigation
 # For external links add external: true
 links:
-  - title: 홈
+  - title: 블로그
     url: /
   - title: 시리즈
     url: /series
   - title: 태그
     url: /tags
-  - title: 소개
+  - title: 블로그 소개
     url: /about
+  - title: 모캠과 함께
+    url: /withus
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
